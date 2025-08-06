@@ -5,9 +5,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
+    private final PlatziPlayAiService aiService;
+
+    public HelloController(PlatziPlayAiService aiService) {
+        this.aiService = aiService;
+    }
 
     @GetMapping("/")
     public String hello() {
-        return "Hello World";
+        return this.aiService.generateGreeting();
     }
 }
