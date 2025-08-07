@@ -6,17 +6,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
-    private final String plataform;
+//private final String plataform;
     private final PlatziPlayAiService aiService;
 
     public HelloController(@Value("${spring.application.name}") PlatziPlayAiService aiService) {
 
-        private.plataform = plataform;
+       // private.plataform = plataform;
         this.aiService = aiService;
     }
 
-    @GetMapping("/")
-    public String hello() {
-        return this.aiService.generateGreeting(plataform);
-    }
+    //@GetMapping("/")
+    //public  String hello() {
+        //return this.aiService.generateGreeting(plataform);
+    //}
 }
